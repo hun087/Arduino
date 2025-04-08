@@ -1,0 +1,22 @@
+리눅스 명령어
+pwd : 현재 내가 있는 위치
+cd .. : 상위 폴더로 이동
+ls : 폴더, 파일 확인
+ls -a : 누구한테 권한 있는지
+cd /home/PC : 절대 주소로 이동
+= cd ~
+mkdir (폴더명) : 폴더 생성
+
+vim (파일명) : vim 편집기
+command mod -> i (insert모드변경)
+:w - 저장
+:q - 종료
+:wq - 저장 후 종료
+esc -> 다시 command mod로
+
+gcc -o 실행파일이름 소스파일
+
+rm 파일이름 : 제거
+
+FTDI 에러시
+msvcr71.dll 다운
