@@ -1,0 +1,10 @@
+사물인터넷 - 라즈베리파이 실습
+
+터미널
+sudo apt update (패키지 목록을 최신으로 갱신)
+sudo apt-get install fonts-unfonts-core -y (기본 한글 폰트를 설치)
+sudo apt-get install ibus ibus-hangul -y (한글패치)
+sudo reboot (재부팅)
+sudo apt install vim -y (텍스트 편집기를 설치)
+
+vim test.py - vim 편집기 명령어 사용
