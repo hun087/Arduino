@@ -1,0 +1,4 @@
+Python InfluxDB lib 설치
+
+Influxdb import with python :
+pip install influxdb
