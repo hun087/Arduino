@@ -2,3 +2,6 @@ Python InfluxDB lib 설치
 
 Influxdb import with python :
 pip install influxdb
+
+hint: See PEP 668 for the detailed specification.
+  sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
