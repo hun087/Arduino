@@ -1,20 +1,29 @@
 InfluxDB 설치
 1. InfluxDB download key using wget :
+InfluxDB 저장소의 공개 키를 다운로드
 wget -q https://repos.influxdata.com/influxdata-archive_compat.key
+
+다운로드한 키의 무결성을 확인한 후, GPG 형식으로 변환하여 신뢰 키 저장소에 추가
 echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
+
+InfluxDB 저장소를 APT 소스 목록에 추가
 echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
 
 2. Packages are up to date && install Influxdb :
+패키지 목록을 업데이트하고 InfluxDB를 설치
 sudo apt-get update && sudo apt-get install influxdb -y
 
 3. InfluxDB as a background service on startup :
+InfluxDB 서비스를 시작 (시스템 부팅 시 자동 실행 설정도 포함됨)
 sudo service influxdb start
 
 4. InfluxDB is status (service)
+InfluxDB 서비스 상태 확인
 sudo service influxdb status
 
 5. InfluxDB 데이터베이스 만들기
+InfluxDB CLI 진입
 $ influx
 
->create database <데이터베이스이름>
-확인 : show databases 
+>create database <데이터베이스이름> - 원하는 데이터베이스 이름 입력
+확인 : show databases - 생성한 데이터베이스가 목록에 나타나는지 확인
