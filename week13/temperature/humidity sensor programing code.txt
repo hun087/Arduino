@@ -1,0 +1,22 @@
+TestAppC.nc .txt
+7. components TestC, MainC; -> 메인파일
+11. components new AMSenderC(AM_TEST_DATA_MSG) as AMSC; -> 무선전송할때 사용하는 모듈
+17. TestC.RadioControl -> AMC; -> 제어
+18. TestC.RadioSend -> AMSC; -> 전송
+20. components new SensirionSht11C() as Sht11ChOC; -> 온습도 센서 모듈
+
+
+
+Test.h .txt
+2, 28. define, endif - 중복방지
+4. enum - (const와 비슷) 
+헤더파일에 많이 들어감
+
+
+
+TestC.nc .txt
+4. interface -> 사용하겠다
+- 비동기 방식 선호
+50, 53. 실패, 성공 모두 (startDone() - 중복) 호출
+RadioControl.startDone -> 내장함수
+58. void startDone() -> 호출
