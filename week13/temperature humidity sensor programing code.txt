@@ -20,3 +20,9 @@ TestC.nc .txt
 50, 53. 실패, 성공 모두 (startDone() - 중복) 호출
 RadioControl.startDone -> 내장함수
 58. void startDone() -> 호출
+69~71 - 무선
+113. event - 비동기식 함수
+동기식 - 수행결과 기다림(ledToggle)
+115. 삼항연산
+실패시 -> 0xFFFA 호출
+
