@@ -1,7 +1,10 @@
 Python InfluxDB lib 설치
 
+Python용 InfluxDB 클라이언트 라이브러리 설치
 Influxdb import with python :
 pip install influxdb
 
 hint: See PEP 668 for the detailed specification.
   sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+- 이 오류는 시스템에서 Python 패키지 설치를 관리하고 있기 때문에,
+  직접 pip로 설치하는 것이 차단되어 있다는 의미입니다.
