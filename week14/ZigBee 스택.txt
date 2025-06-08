@@ -1,0 +1,31 @@
+스택
+프로토콜, 소프트웨어 관한 집합체
+지그비 스택
+지그비에서 정의한 프로토콜 들의 구현
+
+물리계층 PHY LAYER : 데이터 실제로 무선으로 전송하는 Direct Sequence Spread spectrum을 사용하고 있음
+접근 MAC LAYER : CSMA/CA 방식으로 서로 충돌 회피하는 방식
+- wi-fi랑 똑같진 않음 - RTS / CTS 사용x, 나머지는 동일
+네트워크 NETWORK/SECURTIY LAYER : 다수의 노드들이 네트워크 형성할 수 있게끔 지원
+응용 APPLICATION/PROFILES
+
+1. 물리(PHY) 계층
+직비는 IEEE 802.15.4 로 표준
+PHY 계층에 무선으로 주고받음
+3개 밴드 : 800~900MHz, 2.4GHz 채널 총 27개사용
+800~900MHz는 0, 1~10 - 11개
+2.4 GHz는 충돌 방지하고자 11~26 - 16개채널
+(전세계공용)
+
+무선 랜과의 충돌
+2.4GHz 대역에서 무선 랜과 겹치는 채널있음
+Wi-fi - 겹치는 spectrum (25,26 Ch 독자적으로 겹치지x)
+ZigBee - 독립적인 spectrum가짐
+
+
+물리계층 - DSSS (Direct Sequence Spread Spectrum)
+802.11b
+슈도 랜덤 값 - 실제 랜덤값 x 
+Spread code - 암호화
+실제 데이터에서 슈도 랜덤값 곱하고 Spread code로 복호화
+
