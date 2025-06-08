@@ -1,0 +1,58 @@
+Wi-Fi
+1. Wi-Fi 구성
+IEEE 802.11 Working Group에서 표준화 작업
+AP와 station으로 구성
+AP : 유무선 공유기
+STA는 AP에 접속할 수 있는 무선네트워크 인터페이스를 가진 모든 장치 - IOT 디바이스
+
+2. Wi-Fi Service Set
+BSS(Basic Service Set) - 가장 기본적인 서비스 셋
+일반 가정에서 사용 - AP 1개를 기준으로 AP에 연결
+AP가 없으면 ad hoc 모드 - 1:1로 통신하는 에드온 모드
+AP가 있으면 infrastructure 모드 - 일반적으로 사용
+외부에서도 제어할 수 있는 환경
+
+ESS(Extended Service Set) - 고급형
+AP간에 Accesid를 서로 로밍
+두 개 이상의 BSS(환경이 큰)들이 모여서 구성
+
+3. MAC 방식 - 데이터 링크계층
+네트워크 및 통신에서 미디어 액세스 컨트롤이라고 표현
+네트워크 카드 - NIC (맥주소 부여)
+데이터 충돌 제어, 올바른 전송 하기위한 기술 포함
+DCF사용(빈번하게사용)
+-CSMA/CA 사용
+
+PCF
+중앙집중식 Polling 방식 사용
+- 하나의 포인트에서 코디네이션 한다.
+
+4. MAC Data Freame
+FC : 어떤 전체 내가 지금 보내고 있는 패킷에 대한 설정정보 들어가 있음
+ToDS, FromDS - 1bit
+Address - 4종류 사용 (MAC Data Frame에)
+Frame body - 전송할 때 보낼 내용 들어감
+
+5. 주소 체계
+Distribution system(Ds) : 인터넷
+내부에서의 통신은 ToDS=0, FromDS=0 일때를 뜻함
+첫번째 맥주소 : 목적지
+두번째 맥주소 : 출발지 (MAC address)
+BSS-ID : 공유기의 SSID
+
+외부에서 내부에 있는 B라는 컴퓨터에 데이터에 전송할 때
+유선에서 무선 BSS : ToDS=0, FromDS=1 
+첫번째 맥주소 : 목적지
+두번째 맥주소 : AP정보 - AP에 대한 MAC address
+세번째 맥주소 : 출발지 -A에 대한 MAC address
+
+내부에서 와부로 전송할때
+무선에서 유선 BSS : ToDS=1, FromDS=0
+첫번째 맥주소 : AP정보
+두번째 맥주소 : 출발지 - A에 대한 MAC address
+세번째 맥주소 : 도착지 - B에 대한 MAC address
+
+Wireless(무선) distribution system
+AP2에 대한 A가 가지고 있는 영역에서 또다른 영역인 AP2로 전송 할때
+첫번째 맥주소 : AP2에 대한 MAC address
+두번째 맥주소 : AP1에 대한 MAC address
