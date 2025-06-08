@@ -1,0 +1,39 @@
+MAC 계층 특징
+세 종류의 기기로 정의됨
+Network Coordinator (NC) : 네트워크 코디네이터 - 관리자
+- 가장 중요한 역할
+Full Function Device(FFD) : 전기능기기
+- 모든 프로토콜이 구현되어 있는 기기
+Reduced Function Device(RFD) : 축소기능기기
+- 전기능기기에 데이터 전송하기 위한 최소한만 남겨놓은 것
+
+MAC의 선택 사양
+비콘 없는 (Non-Beacon) 통신
+– Non-slotted CSMA-CA 통신
+
+비콘 (Beacon) 사용 통신
+– Slotted CSMA-CA 통신
+시간대별로 슬롯 나눠서 비콘 사용
+슬롯 - 시간 타임 (프레임에서 시간단위로 쪼개는)
+NC에서 각 노드들에게 방송 그러한 패킷을 비콘 - 비콘 사용
+
+지그비 기기
+지그비의 CSMA-CA – RTS, CTS 를 사용하지 않음
+wi-fi에서는 (무선) - 데이터 대규모로 보냄
+금액 비용 싸야함 - 데이터 전송하는데 많은 정보 포함 x
+데이터 대규모 형성 가능
+센싱할 수 있는 디바이스 매개체가 저렴해야함
+
+슈퍼 프레임 (Super Frame) 구조
+슈퍼프레임 사용 한다 -  비콘을 사용한다
+슈퍼프레임은 비콘 (Beacon), CAP(Contention Access Period),
+CFP(Contention Free Period)으로 구성
+CAP구간과 CFP구간을 timeslot 시간을 슬롯 단위로 나눔
+
+active 구간
+CAP, 경쟁 구간 
+– 슬롯 단위의 시간에 맞추어 송수신
+CFP, 경쟁 없이 송수신하는 구간
+GTS : 예약된 슬롯을 GTS (Guaranteed Time Slot)이라 함
+- 보장된 타임슬롯
+
